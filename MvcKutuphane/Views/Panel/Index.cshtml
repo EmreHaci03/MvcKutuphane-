@@ -1,0 +1,59 @@
+﻿@model MvcKutuphane.Models.Entity.TBL_UYELER
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Index", "Panel", FormMethod.Post))
+{
+    <table class="table table-hover">
+        <tr>
+            <td>
+                <label style="font-weight:bolder">Mail Adresi:</label> @HttpContext.Current.User.Identity.Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label">Ad Soyad</label>
+                @Html.TextBoxFor(x => x.UyeAdSoyad, new { @class = "form-control" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="form-label">Kullanıcı Ad</label>
+                @Html.TextBoxFor(x => x.UyeKullaniciAd, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label">Üye Şifre</label>
+                @Html.TextBoxFor(x => x.UyeSifre, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label">Üye Fotoğraf</label>
+                @Html.TextBoxFor(x => x.UyeFotograf, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label">Üye Telefon</label>
+                @Html.TextBoxFor(x => x.UyeTelefon, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label">Üye Okul</label>
+                @Html.TextBoxFor(x => x.UyeOkul, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-warning" type="submit">Güncelle</button></td>
+        </tr>
+    </table>
+}
+

@@ -1,0 +1,45 @@
+﻿@model MvcKutuphane.Models.Entity.TBL_KİTAP
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(k => k.KitapAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(k => k.KitapAd, "",new { @class = "text-danger" })
+    </div> 
+    <div style="margin-top:15px">
+        <label>Kitap Kategorisi</label>
+        @Html.DropDownListFor(k => k.Kategori, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap Yazarı</label>
+        @Html.DropDownListFor(k => k.KitapYazar, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap Yayın Evi</label>
+        @Html.TextBoxFor(k => k.KitapYayınEvi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(k => k.KitapYayınEvi, "", new {@class="text-danger"})
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap Sayfa Sayısı</label>
+        @Html.TextBoxFor(k => k.KitapSayfaSayısı, new { @class = "form-control" })
+        @Html.ValidationMessageFor(k => k.KitapSayfaSayısı, "", new { @class = "text-danger" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap Basım Yılı</label>
+        @Html.TextBoxFor(k => k.KitapBasimYili, new { @class = "form-control" })
+        @Html.ValidationMessageFor(k => k.KitapBasimYili, "", new { @class = "text-danger" })
+    </div>
+    <div style="margin-top:15px"></div>
+    <button class="btn btn-info">Kitap Ekle</button>
+    <input  type="hidden" name="KitapDurum" value="True"/>
+</form>
+
+

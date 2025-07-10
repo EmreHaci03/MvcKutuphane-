@@ -1,0 +1,51 @@
+﻿@model MvcKutuphane.Models.Entity.TBL_UYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <div style="margin-top:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.ID)
+        @Html.TextBoxFor(p => p.ID, new { @class = "form-control" })
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeAdSoyad)
+            @Html.TextBoxFor(p => p.UyeAdSoyad, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeMail)
+            @Html.TextBoxFor(p => p.UyeMail, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeKullaniciAd)
+            @Html.TextBoxFor(p => p.UyeKullaniciAd, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeSifre)
+            @Html.TextBoxFor(p => p.UyeSifre, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeFotograf)
+            @Html.TextBoxFor(p => p.UyeFotograf, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeTelefon)
+            @Html.TextBoxFor(p => p.UyeTelefon, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:15px">
+            @Html.LabelFor(p => p.UyeOkul)
+            @Html.TextBoxFor(p => p.UyeOkul, new { @class = "form-control" })
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+
+}
+
+
+

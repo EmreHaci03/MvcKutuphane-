@@ -1,0 +1,27 @@
+﻿@using MvcKutuphane.Models.Entity
+@model  List<TBL_MESAJLAR>
+@{
+    ViewBag.Title = "GidenMesaj";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Alıcı</th>
+        <th>Konu</th>
+        <th>İçerik</th>
+        <th>Tarih</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {   
+    <tr>
+        <td>@item.Alici</td>
+        <td>@item.Konu</td>
+        <td>@item.Icerik</td>
+        <td>@item.Tarih</td>
+    </tr>
+    }
+</table>
+

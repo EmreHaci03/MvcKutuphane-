@@ -1,0 +1,8 @@
+ MVC’de Data Annotations (veri açıklamaları), model sınıflarında veri doğrulama, biçimlendirme ve meta veriler eklemek için kullanılan öznitelikler (attributes) demek.
+
+Kısaca ne işe yarar?
+Modeldeki alanlara kurallar koyarsın: Mesela bir alanın zorunlu olduğunu, maksimum uzunluğunu, belirli bir formatta olmasını, e-posta adresi gibi doğrulamalar yapabilirsin.
+
+Bu doğrulamalar hem server-side (sunucu tarafında) hem de client-side (istemci tarafında, yani tarayıcıda) çalışır.
+
+Form verileri gönderilmeden önce hataları kullanıcıya göstermek için çok kullanışlıdır.

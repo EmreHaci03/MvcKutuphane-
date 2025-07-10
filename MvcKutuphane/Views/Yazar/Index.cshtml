@@ -1,0 +1,29 @@
+﻿@using MvcKutuphane.Models.Entity
+@model List<TBL_YAZAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr style="background-color: rgba(100, 133, 170, 0.76)">
+    <th>ID</th>
+    <th>Yazar Ad Soyad</th>
+    <th>Yazar Detay</th>
+     <th>Sil</th>
+    <th>Güncelle</th>
+    </tr>
+    @foreach (var y in Model)
+    {
+        <tr>
+            <td>@y.ID</td>
+            <td>@y.YazarAdSoyad</td>
+            <td>@y.YazarDetay</td>
+            <td>@Html.ActionLink("Sil", "YazarSil",new {id=y.ID},new {@class="btn btn-danger"
+               ,onclick="return confirm('Gerçekten Silmek İstiyormusunuz')"})</td>
+            <td><a class="btn btn-success" href="/Yazar/YazarGetir/@y.ID">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Yazar/YazarEkle/">Yeni Yazar Ekle</a>
+

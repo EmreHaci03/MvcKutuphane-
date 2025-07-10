@@ -1,0 +1,46 @@
+﻿@model MvcKutuphane.Models.Entity.TBL_UYELER
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<form method="post" class="form-group">
+    <div style="margin-top:15px">
+        <label>Üye Ad Soyad</label>
+        @Html.TextBoxFor(k => k.UyeAdSoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x=>x.UyeAdSoyad,"", new { @class = "text-danger" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Mail</label>
+        @Html.TextBoxFor(k => k.UyeMail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x=>x.UyeMail,"",new { @class = "text-danger"})
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Kullanıcı Adı</label>
+        @Html.TextBoxFor(k => k.UyeKullaniciAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UyeKullaniciAd, "", new { @class = "text-danger" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Şifre</label>
+        @Html.TextBoxFor(k => k.UyeSifre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UyeSifre, "", new { @class = "text-danger" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Fotoğraf Linki</label>
+        @Html.TextBoxFor(k => k.UyeFotograf, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Telefon</label>
+        @Html.TextBoxFor(k => k.UyeTelefon, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üye Okul</label>
+        @Html.TextBoxFor(k => k.UyeOkul, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px"></div>
+    <button class="btn btn-primary">Üye Ekle</button>
+</form>
+
+

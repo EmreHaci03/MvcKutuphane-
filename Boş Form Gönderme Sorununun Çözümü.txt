@@ -1,0 +1,32 @@
+1- Boş Gönderme Hatası Çözümü--------
+
+string.IsNullOrWhiteSpace(p.Ad) ne yapar?
+Bu ifade, şu 3 durumu kontrol eder:
+
+p.Ad == null → yani hiç değer gelmemiş.
+
+p.Ad == "" → yani boş string.
+
+p.Ad == " " → sadece boşluklardan oluşuyorsa da boş sayar.
+
+Bu yüzden string.IsNullOrWhiteSpace(...) çok güvenli ve kullanışlıdır.
+
+✅ Eğer Ad boşsa ne olur?
+ViewBag.hata içine hata mesajı atanır: "Kategori Adı Boş Bırakılamaz."
+
+return View(); ile form tekrar gösterilir, kullanıcı tekrar doldurur.
+
+⛔ Eğer yazmazsan ne olur?
+Kullanıcı boş kategori adıyla formu gönderir.
+
+Sistem bunu kayıt etmeye çalışır.
+
+Ya boş kayıt oluşur (istenmeyen durum) ya da veritabanında hata çıkar (örneğin NOT NULL kısıtlaması varsa).
+
+💡 Sonuç:
+Kod Satırı	Ne İşe Yarar?
+string.IsNullOrWhiteSpace(p.Ad)	Kullanıcının girdiği değerin boş, null veya sadece boşluklardan ibaret olup olmadığını kontrol eder.
+ViewBag.hata = "...";	Hata mesajını View'a taşır.
+return View();	Formu tekrar ekrana getirir, kullanıcı hatasını düzeltir.
+
+------------------------------------------------------------------------------------
