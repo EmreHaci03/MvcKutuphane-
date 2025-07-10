@@ -5,6 +5,8 @@
 MvcKutuphane, ASP.NET MVC framework kullanılarak geliştirilmiş bir kütüphane otomasyon sistemidir.  
 Kitapların, yazarların, kategorilerin ve kullanıcıların yönetilebildiği, CRUD işlemlerinin yapıldığı dinamik bir web uygulamasıdır.
 
+--Proje Belli Aralıklarla Güncellenecektir.
+
 ---
 
 ## Özellikler
